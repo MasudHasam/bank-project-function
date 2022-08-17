@@ -46,6 +46,6 @@ function getCurrentValue(elementId) {
 function setUpdateValue(elementId, updateAmount) {
     const currentAmount = document.getElementById(elementId);
     currentAmount.innerText = updateAmount;
-}
+};
 
 

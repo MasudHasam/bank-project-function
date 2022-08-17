@@ -11,10 +11,15 @@ document.getElementById("withdrowBtn").addEventListener("click", function () {
         return;
     }
 
+
     //this function is for get current value and process it.
     const currentWithdrowAmount = getCurrentValue("withdrowAmount");
-    if (inputWithdrowAmount > currentWithdrowAmount) {
-        alert("Insufficient balance.");
+
+    //this function is for get current value and process it.
+    const currentMainBalance = getCurrentValue("currentMainBalance");
+
+    if (inputWithdrowAmount > currentMainBalance) {
+        alert("Insufficient balance");
         return;
     }
 
@@ -23,9 +28,6 @@ document.getElementById("withdrowBtn").addEventListener("click", function () {
 
     //this function is for set the update value in current value place.
     setUpdateValue("withdrowAmount", updateWithdrowAmount);
-
-    //this function is for get current value and process it.
-    const currentMainBalance = getCurrentValue("currentMainBalance");
 
     //hear I add input amount and current deposit amount.
     const updateMainBalance = currentMainBalance - inputWithdrowAmount;
