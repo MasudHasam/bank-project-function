@@ -13,6 +13,10 @@ document.getElementById("withdrowBtn").addEventListener("click", function () {
 
     //this function is for get current value and process it.
     const currentWithdrowAmount = getCurrentValue("withdrowAmount");
+    if (inputWithdrowAmount > currentWithdrowAmount) {
+        alert("Insufficient balance.");
+        return;
+    }
 
     //hear I add input amount and current deposit amount.
     const updateWithdrowAmount = currentWithdrowAmount + inputWithdrowAmount;
